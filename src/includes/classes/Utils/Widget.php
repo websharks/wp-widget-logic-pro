@@ -31,14 +31,14 @@ use function get_defined_vars as vars;
 /**
  * Widget utils.
  *
- * @since $v Initial release.
+ * @since 170219.18169 Initial release.
  */
 class Widget extends SCoreClasses\SCore\Base\Core
 {
     /**
      * On `in_widget_form` action.
      *
-     * @since 17xxxx Initial release.
+     * @since 170219.18169 Initial release.
      *
      * @param WP_Widget          $WP_Widget The widget instance by reference.
      * @param string|scalar|null $return    Set to `null` when adding new fields.
@@ -67,7 +67,7 @@ class Widget extends SCoreClasses\SCore\Base\Core
     /**
      * On `widget_update_callback` filter.
      *
-     * @since 17xxxx Initial release.
+     * @since 170219.18169 Initial release.
      *
      * @param array|scalar $instance     Widget instance settings.
      * @param array|scalar $new_instance Widget instance settings.
@@ -91,7 +91,7 @@ class Widget extends SCoreClasses\SCore\Base\Core
     /**
      * On `widget_display_callback` filter.
      *
-     * @since 17xxxx Initial release.
+     * @since 170219.18169 Initial release.
      *
      * @param array|scalar $instance  Widget instance settings.
      * @param WP_Widget    $WP_Widget The widget instance by reference.
