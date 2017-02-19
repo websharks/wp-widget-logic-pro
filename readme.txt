@@ -1,6 +1,6 @@
 === WP Widget Logic Pro ===
 
-Stable tag: 170219.18169
+Stable tag: 170219.32280
 
 Tested up to: 4.8
 Requires at least: 4.7

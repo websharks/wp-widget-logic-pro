@@ -4,7 +4,7 @@
  *
  * @wp-plugin
  *
- * Version: 170219.18169
+ * Version: 170219.32280
  * Text Domain: wp-widget-logic
  * Plugin Name: WP Widget Logic Pro
  *
