@@ -69,14 +69,14 @@ class App extends SCoreClasses\App
                 '§file'            => dirname(__FILE__, 4).'/plugin.php',
             ],
             '©brand' => [
-                '©acronym'     => 'WPWL',
+                '©acronym'     => 'WIDGET LOGIC',
                 '©name'        => 'WP Widget Logic',
 
                 '©slug'        => 'wp-widget-logic',
                 '©var'         => 'wp_widget_logic',
 
-                '©short_slug'  => 'wp-wl',
-                '©short_var'   => 'wp_wl',
+                '©short_slug'  => 'wp-wgt-lgc',
+                '©short_var'   => 'wp_wgt_lgc',
 
                 '©text_domain' => 'wp-widget-logic',
             ],
@@ -116,10 +116,6 @@ class App extends SCoreClasses\App
     {
         parent::onSetupOtherHooks();
 
-        // if ($this->Wp->is_admin) {
-        // Uncomment to enable a default menu page template.
-            // add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
-        // }
         add_action('in_widget_form', [$this->Utils->Widget, 'onInWidgetForm'], 10, 3);
         add_filter('widget_update_callback', [$this->Utils->Widget, 'onWidgetUpdateCallback'], 10, 4);
         add_filter('widget_display_callback', [$this->Utils->Widget, 'onWidgetDisplayCallback'], 10, 3);

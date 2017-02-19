@@ -103,11 +103,15 @@ class Widget extends SCoreClasses\SCore\Base\Core
     {
         $instance = (array) $instance;
         $args     = (array) $args;
-        $logic    = (string) ($instance['_logic'] ?? '');
 
-        if ($logic && !c::phpEval('return ('.$logic.');')) {
-            return false; // `false` = do not display.
+        if (!($logic = (string) ($instance['_logic'] ?? ''))) {
+            return $instance; // No logic.
         }
-        return $instance;
+        try { // We can catch PHP errors in PHP 7+.
+            $include = (bool) c::phpEval('return ('.$logic.');');
+        } catch (\Throwable $eval_Exception) {
+            $include = false; // On failure.
+        }
+        return !$include ? false : $instance;
     }
 }
